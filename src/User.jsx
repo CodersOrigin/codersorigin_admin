@@ -42,19 +42,19 @@ const User = () => {
         <div className='user'>
           <div className="usercon">
             
-            <table  style={{ width: '90%' }}>
+            <table >
               <thead>
                 <tr className='head'>
-                  <th style={{ width: '20%' }}>Name</th>
-                  <th style={{ width: '40%' }}>Email</th>
-                  <th style={{ width: '10%' }}>Contact No</th>
+                  <th style={{ width: '25%' }}>Name</th>
+                  <th style={{ width: '35%' }}>Email</th>
+                  <th style={{ width: '15%' }}>Contact No</th>
                   <th style={{ width: '10%' }}>Last Login</th>
-                  <th style={{ width: '30%' }}>Account Created On</th>
+                  <th style={{ width: '15%' }}>Account Created On</th>
                 </tr>
               </thead>
               <tbody>
                 {userData.map((user) => (
-                  <tr key={user._id}>
+                  <tr className='bodyrow' key={user._id}>
                     <td>{`${user.firstName} ${user.lastName}`}</td>
                     <td>{user.email}</td>
                     <td>{user.contactNumber}</td>

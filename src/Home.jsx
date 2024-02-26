@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +12,7 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  const [errorMessage, setErrorMessage] = useState('');
+ 
 
   const handleChange = (event) => {
     setFormData({
@@ -26,17 +28,19 @@ const Home = () => {
       const response = await axios.post(process.env.REACT_APP_LOGIN, formData);
 
       if (response.data.success) {
-        console.log('Login successful');
-        console.log(response.data.authtoken);
+  
+        toast.success('Login successful')
+       
         localStorage.setItem('authToken', response.data.authtoken);
         navigate('/');
       } else {
-        setErrorMessage('Invalid username or password');
+        toast.error('Invalid username or password')
+       
       }
     } catch (error) {
-      console.error('Error during login:', error);
-
-      setErrorMessage('An error occurred during login');
+ 
+      toast.error('Invalid username or password')
+     
     }
   };
 
@@ -51,7 +55,7 @@ const Home = () => {
         <input className='btn' type="submit" value="Submit" />
       </form>
 
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+    
     </div>
   );
 };

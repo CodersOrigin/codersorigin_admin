@@ -8,7 +8,7 @@ import User from './User';
 import Quiz from './Quiz';
 import Dashboard from "./Dashboard";
 import { useEffect } from 'react';
-
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <Route path="/quiz" element={<ProtectedRoute Component={Quiz} />} />
         </Routes>
       </Router>
-      
+      <ToastContainer />
     </>
   );
 }
