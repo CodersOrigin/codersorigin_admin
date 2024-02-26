@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from "./components/Header"
+
 
 const User = () => {
   return (
-    <div>User</div>
+    <div className='user'>
+          <Header />
+        </div>
   )
 }
 

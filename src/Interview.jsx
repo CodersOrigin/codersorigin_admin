@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from "./components/Header"
 const Interview = () => {
   return (
-    <div>Interview</div>
+    <div className='interview'>
+          <Header />
+        </div>
   )
 }
 

@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from "./components/Header"
+
 
 const Quiz = () => {
   return (
-    <div>Quiz</div>
+    <div className='quiz'>
+          <Header />
+        </div>
   )
 }
 

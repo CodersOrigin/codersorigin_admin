@@ -41,17 +41,14 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='login'>
       <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input type="text" name="username" value={formData.username} onChange={handleChange} required />
-        </label>
-        <label>
-          Password:
-          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-        </label>
-        <input type="submit" value="Submit" />
+        <p className='atext'>Admin login</p>
+        
+          <input type="text" name="username" placeholder='Username' value={formData.username} onChange={handleChange} required />
+          <input type="password" name="password" placeholder='Password' value={formData.password} onChange={handleChange} required />
+       
+        <input className='btn' type="submit" value="Submit" />
       </form>
 
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}

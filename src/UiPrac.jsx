@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from "./components/Header"
+
 
 const UiPrac = () => {
   return (
-    <div>UiPrac</div>
+    <div className='uiprac'>
+    <Header />
+  </div>
   )
 }
 

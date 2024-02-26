@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from "./components/Header"
 
 const Machine = () => {
   return (
-    <div>Machine</div>
+    <div className='machine'>
+          <Header />
+        </div>
   )
 }
 
