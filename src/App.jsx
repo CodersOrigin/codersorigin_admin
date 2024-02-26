@@ -33,7 +33,7 @@ function App() {
 
 function ProtectedRoute({ Component }) {
   useEffect(() => {
-    // Empty dependency array ensures the effect runs only once when the component mounts
+    
   }, []);
 
   const authToken = localStorage.getItem('authToken');

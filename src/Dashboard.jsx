@@ -19,7 +19,7 @@ const Dashboard = () => {
           },
         });
 
-        // Assuming the response has an 'isAdmin' property
+     
         const isAdmin = response.data.isAdmin;
 
         if (isAdmin === true) {

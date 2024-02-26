@@ -107,5 +107,13 @@ input{
     height: 8vh;
     gap: 2rem;
     background-color: var(--bgshade);
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
 
+}
+
+.user{
+    padding-top: 10vh;
 }
