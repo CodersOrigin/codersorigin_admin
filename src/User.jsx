@@ -41,15 +41,15 @@ const User = () => {
       ) : (
         <div className='user'>
           <div className="usercon">
-            {/* Display user information in a table */}
-            <table>
+            
+            <table  style={{ width: '90%' }}>
               <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Contact No</th>
-                  <th>Last Login</th>
-                  <th>Account Created On</th>
+                <tr className='head'>
+                  <th style={{ width: '20%' }}>Name</th>
+                  <th style={{ width: '40%' }}>Email</th>
+                  <th style={{ width: '10%' }}>Contact No</th>
+                  <th style={{ width: '10%' }}>Last Login</th>
+                  <th style={{ width: '30%' }}>Account Created On</th>
                 </tr>
               </thead>
               <tbody>

@@ -117,3 +117,9 @@ input{
 .user{
     padding-top: 10vh;
 }
+
+.usercon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
