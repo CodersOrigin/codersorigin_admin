@@ -40,18 +40,34 @@ function App() {
           />
           <Route
             path="/machine"
-            element={<ProtectedRoute Component={Machine} />}
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} Component={Machine} />
+            }
           />
           <Route
             path="/uiprac"
-            element={<ProtectedRoute Component={UiPrac} />}
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} Component={UiPrac} />
+            }
           />
           <Route
             path="/problem"
-            element={<ProtectedRoute Component={Problem} />}
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} Component={Problem} />
+            }
           />
-          <Route path="/user" element={<ProtectedRoute Component={User} />} />
-          <Route path="/quiz" element={<ProtectedRoute Component={Quiz} />} />
+          <Route
+            path="/user"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} Component={User} />
+            }
+          />
+          <Route
+            path="/quiz"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} Component={Quiz} />
+            }
+          />
         </Routes>
       </Router>
       <ToastContainer />
