@@ -12,7 +12,6 @@ const Home = () => {
 
   const navigate = useNavigate();
 
- 
 
   const handleChange = (event) => {
     setFormData({
@@ -40,6 +39,8 @@ const Home = () => {
     } catch (error) {
  
       toast.error('Invalid username or password')
+      console.log(error)
+
      
     }
   };

@@ -17,7 +17,7 @@ const User = () => {
 
         const response = await axios.get(process.env.REACT_APP_GETALL_USER, { headers });
 
-        // Simulate a 1-second delay before updating the state and hiding the loader
+        console.log(userData)
         setTimeout(() => {
           setUserData(response.data);
           setLoading(false);
@@ -55,7 +55,7 @@ const User = () => {
               <tbody>
                 {userData.map((user) => (
                   <tr className='bodyrow' key={user._id}>
-                    <td>{`${user.firstName} ${user.lastName}`}</td>
+                    <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>{user.contactNumber}</td>
                     <td>{user.lastLogin.length > 0 ? user.lastLogin[0] : 'N/A'}</td>
