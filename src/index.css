@@ -117,6 +117,20 @@ input,select{
 
 }
 
+.username{
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+.logout{
+    color: #F2AE2C;
+    background: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
 .user{
     padding-top: 10vh;
     min-height: 100vh;
