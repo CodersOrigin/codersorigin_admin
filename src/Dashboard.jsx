@@ -41,7 +41,20 @@ const Dashboard = ({ isLoggedIn, setIsLoggedIn }) => {
 
   return isLoggedIn ? (
     <div className="dashboard">
-      <Header setIsLoggedIn={setIsLoggedIn} name={user.name} />
+      <Header />
+      <div className="logoutContainer">
+        <p className="navlink">{user.name}</p>
+        <button
+          className="logout"
+          onClick={() => {
+            localStorage.removeItem("authToken");
+            setIsLoggedIn(false);
+            navigate("/login");
+          }}
+        >
+          Logout
+        </button>
+      </div>
     </div>
   ) : (
     <div className="preloader">

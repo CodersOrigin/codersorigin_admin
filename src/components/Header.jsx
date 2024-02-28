@@ -1,8 +1,7 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Header = ({ setIsLoggedIn, name }) => {
-  const navigate = useNavigate();
+const Header = () => {
   const links = [
     {
       linkpath: "/",
@@ -48,17 +47,6 @@ const Header = ({ setIsLoggedIn, name }) => {
           </NavLink>
         );
       })}
-      <p className="navlink">{name}</p>
-      <button
-        className="logout"
-        onClick={() => {
-          localStorage.removeItem("authToken");
-          setIsLoggedIn(false);
-          navigate("/login");
-        }}
-      >
-        Logout
-      </button>
     </header>
   );
 };
