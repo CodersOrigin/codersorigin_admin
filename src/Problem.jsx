@@ -91,8 +91,7 @@ const Problem = () => {
           >
             <option value="">Choose an Option</option>
             <option value="javascript">JavaScript</option>
-            <option value="javascript">CSS</option>
-            <option value="javascript">HTML</option>
+            
        
           </select>
           <select
