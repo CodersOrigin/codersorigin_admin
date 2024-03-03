@@ -5,6 +5,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "./Home";
+import OauthError from "./OauthError";
+import OauthSuccess from "./OauthSuccess";
 import Interview from "./Interview";
 import Problem from "./Problem";
 import Machine from "./Machine";
@@ -23,6 +25,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<Home />} />
+          <Route path="/oauth/error" element={<OauthError />} />
+          <Route path="/oauth/success" element={<OauthSuccess />} />
           <Route
             path="/"
             element={

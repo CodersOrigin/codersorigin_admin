@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import getGoogleOauthUrl from "./lib/getGoogleOauthUrl";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -40,6 +41,7 @@ const Home = () => {
 
   return (
     <div className="login">
+      <a href={getGoogleOauthUrl()}>Login with Google</a>
       <form onSubmit={handleSubmit}>
         <p className="atext">Admin login</p>
 
