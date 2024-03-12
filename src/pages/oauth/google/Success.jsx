@@ -8,7 +8,6 @@ const OauthSuccess = () => {
     const authtoken = new URLSearchParams(window.location.search).get(
       "authtoken"
     );
-    console.log(authtoken);
 
     // set token in localstorage and redirect to dashboard
     if (authtoken) {

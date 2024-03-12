@@ -5,8 +5,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "./Home";
-import OauthError from "./OauthError";
-import OauthSuccess from "./OauthSuccess";
+import OauthError from "./pages/oauth/google/Error";
+import OauthSuccess from "./pages/oauth/google/Success";
 import Interview from "./Interview";
 import Problem from "./Problem";
 import Machine from "./Machine";
