@@ -63,9 +63,8 @@ const Home = () => {
         <input className="btn" type="submit" value="Submit" />
       </form>
       {/* <a href={getGoogleOauthUrl()}>Login with Google</a> */}
-
-      <a class="googleButton" href={getGoogleOauthUrl()}>
-        <span>Continue with Google</span>
+      <a type="button" class="login-with-google-btn" href={getGoogleOauthUrl()}>
+        Sign in with Google
       </a>
     </div>
   );
