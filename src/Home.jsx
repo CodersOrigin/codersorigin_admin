@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import getGoogleOauthUrl from "./lib/getGoogleOauthUrl";
-
 const Home = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -41,7 +40,6 @@ const Home = () => {
 
   return (
     <div className="login">
-      <a href={getGoogleOauthUrl()}>Login with Google</a>
       <form onSubmit={handleSubmit}>
         <p className="atext">Admin login</p>
 
@@ -64,6 +62,11 @@ const Home = () => {
 
         <input className="btn" type="submit" value="Submit" />
       </form>
+      {/* <a href={getGoogleOauthUrl()}>Login with Google</a> */}
+
+      <a class="googleButton" href={getGoogleOauthUrl()}>
+        <span>Continue with Google</span>
+      </a>
     </div>
   );
 };

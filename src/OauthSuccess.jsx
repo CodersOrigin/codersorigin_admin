@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
-import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const OauthSuccess = () => {
+  const navigate = useNavigate();
   useEffect(() => {
-    // Get the token from the cookies
-    const token = Cookies.get("authtoken");
+    // get authtoken from the URL
+    const authtoken = new URLSearchParams(window.location.search).get(
+      "authtoken"
+    );
+    console.log(authtoken);
 
-    // Now you can use the token
-    console.log(token);
+    // set token in localstorage and redirect to dashboard
+    if (authtoken) {
+      localStorage.setItem("authToken", authtoken);
+      navigate("/");
+    }
   }, []);
-  return <div>Welcome to CodersOrigin Admin panel</div>;
+  return <div>Verifying</div>;
 };
 
 export default OauthSuccess;
