@@ -21,7 +21,6 @@ const User = () => {
           headers,
         });
 
-        console.log(userData);
         setTimeout(() => {
           setUserData(response.data);
           setLoading(false);
@@ -49,6 +48,7 @@ const User = () => {
               <thead>
                 <tr className="head">
                   <th style={{ width: "25%" }}>Name</th>
+                  <th style={{ width: "25%" }}>Username</th>
                   <th style={{ width: "35%" }}>Email</th>
                   <th style={{ width: "15%" }}>Contact No</th>
                   <th style={{ width: "10%" }}>Last Login</th>
@@ -63,6 +63,7 @@ const User = () => {
                       <Avatar src={user.profilePic} alt="User Avatar" />
                       {user.name}
                     </td>
+                    <td>{user.username}</td>
                     <td>{user.email}</td>
                     <td>{user.contactNumber}</td>
                     <td>
