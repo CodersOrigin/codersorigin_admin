@@ -7,7 +7,6 @@ import getGoogleOauthUrl from "./lib/getGoogleOauthUrl";
 
 const githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 const githubRedirectUri = process.env.REACT_APP_GITHUB_REDIRECT_URI;
-const path = "/oauth/success";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -77,7 +76,7 @@ const Home = () => {
         Login with Github
       </a> */}
       <a
-        href={`https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${githubRedirectUri}?path=${path}&scope=user:email`}
+        href={`https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${githubRedirectUri}&scope=user:email`}
         type="button"
         class="login-with-github-btn"
       >
