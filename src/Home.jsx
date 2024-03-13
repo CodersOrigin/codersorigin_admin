@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import getGoogleOauthUrl from "./lib/getGoogleOauthUrl";
+
+const githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+const githubRedirectUri = process.env.REACT_APP_GITHUB_REDIRECT_URI;
+const path = "/oauth/success";
+
 const Home = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -65,6 +70,11 @@ const Home = () => {
       {/* <a href={getGoogleOauthUrl()}>Login with Google</a> */}
       <a type="button" class="login-with-google-btn" href={getGoogleOauthUrl()}>
         Sign in with Google
+      </a>
+      <a
+        href={`https://github.com/login/oauth/authorize?client_id=${githubClientId}&redirect_uri=${githubRedirectUri}?path=${path}&scope=user:email`}
+      >
+        Login with Github
       </a>
     </div>
   );
