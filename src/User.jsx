@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Preloader from "../src/image/preloader.gif";
 import Avatar from "./components/Avatar";
+import { Checkmark } from "react-checkmark";
 
 const User = () => {
   const [userData, setUserData] = useState([]);
@@ -51,22 +52,23 @@ const User = () => {
                   <th style={{ width: "35%" }}>Email</th>
                   <th style={{ width: "15%" }}>Contact No</th>
                   <th style={{ width: "10%" }}>Last Login</th>
+                  <th style={{ width: "10%" }}>Admin</th>
                   <th style={{ width: "15%" }}>Account Created On</th>
                 </tr>
               </thead>
               <tbody>
                 {userData.map((user) => (
                   <tr className="bodyrow" key={user._id}>
-                    <td>
+                    <td className="avatarContainer">
                       <Avatar src={user.profilePic} alt="User Avatar" />
+                      {user.name}
                     </td>
-                    <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>{user.contactNumber}</td>
                     <td>
                       {user.lastLogin.length > 0 ? user.lastLogin[0] : "N/A"}
                     </td>
-                    <td>{user.isAdmin}</td>
+                    <td>{user.isAdmin && <Checkmark size="medium" />}</td>
                     <td>{new Date(Number(user.createdOn)).toLocaleString()}</td>
                   </tr>
                 ))}

@@ -252,4 +252,9 @@ th{
     height: 50px; /* Adjust as needed */
     border-radius: 50%;
   }
-  
+  .avatarContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+  }
